@@ -1,38 +1,21 @@
 "use strict";
-// function greet(name: string):string {
-//     console.log("hellow", name.toUpperCase());
-//     return `Hello, ${name}!`;
+// interface user{
+//     name: string;
+//     age: number;
+//     password:string
 // }
-// greet("Alice");
-// // optinal function parameter
-// function log(massage: string, userID?: string) {
-//     console.log(massage, userID || "Not signed in");
+// function showUserinfo(user: user){
+//     console.log(`Name: ${user.name}, Age: ${user.age}, Password: ${user.password}`);
 // }
-// log("Hello, world!", "user123");
-// function welcome(name:string = "Guest"){
-//     console.log(`Welcome, ${name}!`);
-// }
-// welcome();
-// welcome("alice");
-// function sum(...numbers: number[]):number{
-//     return numbers.reduce((a, b ) => a+b, 0)
-// }
-// console.log(sum(12,13,22,))
-function fullName(firstName, lastName) {
-    return `${firstName} ${lastName}`;
+// showUserinfo({name: "John", age: 30, password: "secret"})\
+function login(user) {
+    console.log(`Username: ${user.username}, Password: ${user.password} Email: ${user.email ?? "no EMail weyh"} ID: ${user.id}`);
 }
-console.log(fullName("John", "Doe"));
-function registerUser(username, isAdmin, language = "en") {
-    console.log(`User: ${username}, Admin: ${isAdmin ?? false}, Language: ${language}`);
-}
-// registerUser("alice");
-// registerUser("bob", true);
-registerUser("charlie", false);
-//rest reduce 
-function avarage(...scrores) {
-    if (scrores.length === 0)
-        return 0;
-    const total = scrores.reduce((a, b) => a + b, 0);
-    return total / scrores.length;
-}
-console.log(avarage(90, 80, 70));
+login({ username: "admin", password: "admin123", email: "admin@example.com", id: 1 });
+const user = {
+    username: "admin",
+    password: "admin123",
+    email: "admin@example.com",
+    id: 2
+};
+user.id = 3;

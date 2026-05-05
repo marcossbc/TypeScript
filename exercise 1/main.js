@@ -1,19 +1,16 @@
 "use strict";
-// let price: number = 19.99;
-// let productName : string = "Wireless Mouse";
-// let discontAvailable : boolean = true;
-// console.log(productName);
-// console.log(price);
-// console.log(discontAvailable);
-// function getDiscount(price: number, discount: number): number {
-//   return price - price * discount;
-// }
-// function test(x: unknown) {
-//   if (typeof x === "string") {
-//     console.log(x.length); 
-//   }
-// }
-let users = ["ali", "ahmed", "maxamed"];
-let numbers = [1, 2, 3, 4, 5];
-console.log(users);
-console.log(numbers);
+// let users : string[] = ["ali", "ahmed", "maxamed"];
+// let numbers : number[] = [1,2,3,4,5];
+// console.log(users);
+// console.log(numbers);
+let names = ["Alice", "Bob", "Charlie", "faraah", "maxamed"];
+let grades = [85, 92, 78, 90, 88];
+let statusList = [true, false, true, true, false];
+let products = ["labtop", "phone", "tablet"];
+let locationList = ["New York", 40.7128, -74.0060];
+console.log(locationList);
+products.push("headphones");
+//  products.push(90);
+names.push("Xaliimo");
+grades.push(95);
+statusList.push(false);

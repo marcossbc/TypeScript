@@ -1,47 +1,28 @@
-// function greet(name: string):string {
-//     console.log("hellow", name.toUpperCase());
-//     return `Hello, ${name}!`;
+// interface user{
+//     name: string;
+//     age: number;
+//     password:string
 // }
-// greet("Alice");
-
-// // optinal function parameter
-// function log(massage: string, userID?: string) {
-//     console.log(massage, userID || "Not signed in");
-
-
+// function showUserinfo(user: user){
+//     console.log(`Name: ${user.name}, Age: ${user.age}, Password: ${user.password}`);
 // }
-// log("Hello, world!", "user123");
+// showUserinfo({name: "John", age: 30, password: "secret"})\
 
-// function welcome(name:string = "Guest"){
-//     console.log(`Welcome, ${name}!`);
-// }
-// welcome();
-// welcome("alice");
-
-// function sum(...numbers: number[]):number{
-//     return numbers.reduce((a, b ) => a+b, 0)
-// }
-// console.log(sum(12,13,22,))
-
-function fullName(firstName: string, lastName: string): string{
-    return `${firstName} ${lastName}`;
+interface User{
+    username:string;
+    password:string;
+    email?:string;
+    readonly id:number
 }
-console.log(fullName("John", "Doe"));
-
-
-function registerUser(username: string, isAdmin?: boolean , language: string = "en") {
-    console.log(`User: ${username}, Admin: ${isAdmin ?? false}, Language: ${language}`);
+function login(user:User){
+    console.log(`Username: ${user.username}, Password: ${user.password} Email: ${user.email ?? "no EMail weyh"} ID: ${user.id}`);
 }
-// registerUser("alice");
-// registerUser("bob", true);
-registerUser("charlie", false);
+login({username: "admin", password: "admin123", email: "admin@example.com", id: 1 })
 
-//rest reduce 
-function avarage(...scrores: number[]): number {
-    if(scrores.length === 0) return 0;
-    const total = scrores.reduce((a, b) => a + b, 0);
-    return total / scrores.length;
- 
-
-}
-console.log(avarage(90, 80, 70));
+const user:User = {
+    username: "admin",
+    password: "admin123",
+    email: "admin@example.com",
+    id: 2
+};
+user.id =3;
